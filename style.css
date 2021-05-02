@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Dark-Cyan: hsl(185, 75%, 39%);
+    --Dark-Blue: hsl(229, 23%, 23%);
+    --Grayish-blue: hsl(227, 10%, 46%);
+    --Dark-Gray: hsl(0, 0%, 59%);
+}
+
+body {
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: var(--Dark-Cyan);
+    overflow: hidden;
+    position: relative;
+}
+
+#top {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    min-width: 1000px;
+}
+#bottom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 1200px;
+}
+
+.card {
+    z-index: 1;
+    width: 90%;
+    max-width: 400px;
+    height: 425px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+}
+.info {
+    width: 100%;
+    height: 75%;
+    background-color: white;
+    position: relative;
+}
+
+#infoPic {
+    position: absolute;
+    top: calc(50% - calc(96px / 2) - calc(5px / 2));
+    left: calc(50% - calc(96px / 2) - calc(5px / 2));
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.info-top {
+    height: 50%;
+    width: 100%;
+    border-bottom: 1px solid var(--Dark-Cyan);
+}
+.info-bottom {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.info-txt {
+    height: 50%;
+    color: var(--Dark-Blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.name {
+    font-size: 20px;
+    font-weight: 700;
+}
+.age,
+.city {
+    font-weight: 400;
+}
+
+.stats-container {
+    width: 100%;
+    height: 25%;
+    background-color: white;
+    border-top: 1px solid lightgray;
+}
+
+.stats {
+    color: var(--Dark-Blue);
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.num {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.tag {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+}
